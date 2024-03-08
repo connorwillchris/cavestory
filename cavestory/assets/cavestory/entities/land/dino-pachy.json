@@ -4,20 +4,48 @@
     "variantgroups": [
         {
             "code": "gender",
-            "states": [ "male", "female", "baby" ]
+            "states": ["male", "female", "baby"]
         }
     ],
     "hitboxSize": {
-        "x": 1.0, "y": 1.0 // placeholder
+        "x": 1.0,
+        "y": 1.0 // placeholder
     },
     "eyeHeight": 1.0, // placeholder
     "drops": [],
-    "attributes": {},
+    "attributes": {
+        "creatureDiet": {
+            "foodCategories": ["Vegetable"],
+            "foodTags": []
+        }
+    },
     "client": {
-
+        "behaviors": [{ "code": "multiply" }]
     },
     "server": {
-
+        "behaviors": [
+            {
+                "code": "multiply",
+                "enabledByType": {
+                    "*-female": true,
+                    "*": false
+                },
+                "spawnEntityCodeByType": {
+                    "*-female": "dino-pachy-baby"
+                },
+                "spawnQuantityMin": 1,
+                "spawnQuantityMax": 1,
+                "growthCapEntityCodes": ["dino-pachy-baby", "dino-pachy-female", "dino-pachy-male"],
+                "requiresNearbyEntityCodeByType": {
+                    "*-female": "dino-pachy-male"
+                },
+                "requiresNearbyEntityRange": 10,
+                "pregnancyDays": 25,
+                "multiplyCooldownDaysMin": 6,
+                "multiplyCooldownDaysMax": 11,
+                "portionsEatenForMultiply": 10
+            }
+        ]
     },
     "sounds": {
         "hurt": "creature/dino-pachy/hurt",
