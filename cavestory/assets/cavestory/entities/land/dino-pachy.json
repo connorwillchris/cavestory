@@ -4,26 +4,60 @@
     "variantgroups": [
         {
             "code": "gender",
-            "states": ["male", "female", "baby"]
+            "states": [ "male", "female", "baby" ]
         }
     ],
-    "hitboxSize": {
-        "x": 1.0,
-        "y": 1.0 // placeholder
-    },
-    "eyeHeight": 1.0, // placeholder
+    "hitboxSize": { "x": 1.0, "y": 1.0 },
+    "eyeHeight": 1.0,
     "drops": [],
     "attributes": {
         "creatureDiet": {
-            "foodCategories": ["Vegetable"],
+            "foodCategories": [ "Vegetable" ],
             "foodTags": []
         }
     },
     "client": {
-        "behaviors": [{ "code": "multiply" }]
+        "renderer": "Shape",
+        "behaviors": [
+            {
+                "code": "repulseagents"
+            },
+            {
+                "code": "controlledphysics",
+                "stepHeight": 1.0001
+            },
+            {
+                "code": "floatupwhenstuck",
+                "onlyWhenDead": true
+            },
+            {
+                "code": "interpolateposition"
+            },
+            {
+                "code": "despawn",
+                "minPlayerDistance": 16,
+                "belowLightLevel": 8,
+                "minSeconds": 300,
+                "afterDays": 14
+            },
+            {
+                "code": "multiply"
+            },
+            {
+                "code": "harvestable",
+                "quantitySlots": 16
+            }
+        ]
     },
     "server": {
         "behaviors": [
+            {
+                "code": "repulseagents"
+            },
+            {
+                "code": "controlledphysics",
+                "stepHeight": 1.0001
+            },
             {
                 "code": "multiply",
                 "enabledByType": {
@@ -35,7 +69,7 @@
                 },
                 "spawnQuantityMin": 1,
                 "spawnQuantityMax": 1,
-                "growthCapEntityCodes": ["dino-pachy-baby", "dino-pachy-female", "dino-pachy-male"],
+                "growthCapEntityCodes": [ "dino-pachy-baby", "dino-pachy-female", "dino-pachy-male" ],
                 "requiresNearbyEntityCodeByType": {
                     "*-female": "dino-pachy-male"
                 },
@@ -44,6 +78,30 @@
                 "multiplyCooldownDaysMin": 6,
                 "multiplyCooldownDaysMax": 11,
                 "portionsEatenForMultiply": 10
+            },
+            {
+                "code": "despawn",
+                "minPlayerDistance": 0,
+                "minSeconds": 120
+            },
+            {
+                "code": "harvestable",
+                "quantitySlots": 16
+            },
+            {
+                "code": "health",
+                "maxHealth": 10
+            },
+            {
+                "code": "deaddecay",
+                "hourToDecay": 96,
+                "decayedBlock": "carcass-large"
+            },
+            {
+                "code": "taskai",
+                "aitasks": [
+                    
+                ]
             }
         ]
     },
