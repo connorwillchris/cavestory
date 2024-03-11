@@ -1,5 +1,6 @@
 {
     "code": "dino-pachy",
+    "class": "Cavestory.EntityDinosaur",
     "enabled": true,
     "variantgroups": [
         {
@@ -44,8 +45,7 @@
                 "code": "multiply"
             },
             {
-                "code": "harvestable",
-                "quantitySlots": 16
+                "code": "harvestable"
             }
         ]
     },
@@ -100,7 +100,7 @@
             {
                 "code": "taskai",
                 "aitasks": [
-                    
+
                 ]
             }
         ]

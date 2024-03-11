@@ -1,18 +1,19 @@
-﻿//using Vintagestory.API.Client;
-using Vintagestory.API.Common;
-using Vintagestory.API.Server;
+﻿using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 
 namespace cavestory;
 
-public class CaveStory : ModSystem {
-    private ICoreServerAPI serverApi;
-    //private ICoreClientAPI clientAPI;
+public class Cavestory : ModSystem {
 
     public override void Start(ICoreAPI api) {
-        api.Logger.Notification("Hello world from cavestory");
+        // register the entities
+        api.Logger.Notification("Cavestory: Registering Entities in CAVESTORY...");
+        api.RegisterEntity("cavestory.EntityDinosaur", typeof(Cavestory.EntityDinosaur));
+
+        api.Logger.Notification("Cavestory: Registering done!");
     }
 
-    public override void StartServerSide(ICoreServerAPI api) {
-        serverApi = api;
+    public abstract class EntityDinosaur : Entity {
+        
     }
 }

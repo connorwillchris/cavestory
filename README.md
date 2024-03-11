@@ -2,4 +2,7 @@
 
 version 0.1.0-alpha
 
-- pachycephalosaurus
+## Contributors
+
+- treeman0013
+- Craluminum2413
