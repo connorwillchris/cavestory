@@ -1,4 +1,4 @@
-- [] pachycephalosaurus - in progress
-- [] ankylosaurus
-- [] tyrannasaurus rex
-- [] pteranadon
+- [] Pachycephalosaurus - in progress
+- [] Ankylosaurus
+- [] Tyrannasaurus rex
+- [] Pteranadon
