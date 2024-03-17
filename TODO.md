@@ -1,4 +1,24 @@
-- [] Pachycephalosaurus - in progress
+# Jurrassic
+
+- [] Brachiosaurus
+- [] Plesiosaurus
+- [] Lipteradon
+- [] Liopleurodon
+- [] Dilophosaurus
+- [] Allosaurus
+- [] Archeopteryx
+- [] Mamenchiosaurus
+- [] Stegosaurus
+
+# Cretacious
+
+- [] Quetzalcotalus
+- [] Spinosaurus
+- [] Tyrannasaurus Rex
+- [] Oviraptor
+- [] Veloceraptor
 - [] Ankylosaurus
-- [] Tyrannasaurus rex
-- [] Pteranadon
+- [] Edmontosaurus
+- [] Parasaurolophus
+- [] Triceratops
+- [] Pachycephalosaurus
