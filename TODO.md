@@ -2,7 +2,7 @@
 
 - [] Brachiosaurus
 - [] Plesiosaurus
-- [] Lipteradon
+- [] Camptosaurus
 - [] Liopleurodon
 - [] Dilophosaurus
 - [] Allosaurus
